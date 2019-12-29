@@ -50,15 +50,16 @@ let createChannel = function(msg, ts, command, args) {
                 return;
             }
 
-            let pwd = "";
-            for(let i = 1; i < args.length; i++) {
-                pwd += `${args[i]} `;
+            let data = "";
+            for(let i = 0; i < args.length; i++) {
+                data += `${args[i]} `;
             }
-            pwd = pwd.trim();
+            data = data.trim();
+            let splittedData = data.split(":");
 
-            ts.channelCreate(args[0], {
+            ts.channelCreate(splittedData[0], {
                 channel_flag_temporary: 1,
-                channel_password: pwd,
+                channel_password: splittedData[1],
                 channel_codec: 5,
                 channel_codec_quality: 10,
                 channel_description: formatLocalString("COMMAND.CREATECHANNEL.CHANNELDESC", {
@@ -67,7 +68,7 @@ let createChannel = function(msg, ts, command, args) {
                     client_id: msg.invoker.clid
                 })
             }).then(channel => {
-                msg.invoker.move(channel.cid, pwd ? pwd : null);
+                msg.invoker.move(channel.cid, splittedData[1] ? splittedData[1] : null);
                 ts.setClientChannelGroup(5, channel.cid, msg.invoker.databaseId);
                 ts.getClientByID(whoami.client_id).then(client => {
                     client.kickFromChannel("");
@@ -76,8 +77,8 @@ let createChannel = function(msg, ts, command, args) {
                 msg.invoker.message(formatLocalString("COMMAND.CREATECHANNEL.CHANNELCREATED", {
                     username: msg.invoker.nickname,
                     client_id: msg.invoker.clid,
-                    channel_name: args[0],
-                    channel_password: pwd,
+                    channel_name: splittedData[0],
+                    channel_password: splittedData[1] ? splittedData[1] : "",
                     channel_id: channel.cid
                 }));
             });
@@ -116,7 +117,7 @@ let pokespam = function(msg, ts, command, args) {
 
     ts.getClientByName(args[0]).then(client => {
         for(let i = 0; i < args[1]; i++) {
-            client.poke("Nibba");
+            client.poke("Nibba").catch(() => {});
         }
     }).catch(() => {
 

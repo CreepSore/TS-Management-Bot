@@ -5,9 +5,9 @@
     "COMMAND.HELP.TEXT": [
         "",
         "Hallo {k:username}. Du willst Hilfe?",
-        "\"createchannel <channelname> [passwort]\": Erstellt dir einen Temporären Channel"
+        "\"createchannel <channelname>[:passwort]\": Erstellt dir einen Temporären Channel"
     ],
-    "COMMAND.CREATECHANNEL.TOOFEWARGS": "Bitte gib einen Channelnamen an!",
+    "COMMAND.CREATECHANNEL.TOOFEWARGS": "Ungültige Argumente! Beispiel: \"createchannel Test Channel:Passwort\"",
     "COMMAND.CREATECHANNEL.CHANNELEXISTS": "Der gewünschte Channelname existiert bereits!",
     "COMMAND.CREATECHANNEL.CHANNELCREATED": [
         "Dein Channel \"{k:channel_name}\" wurde erstellt.",
