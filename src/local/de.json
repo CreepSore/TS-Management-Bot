@@ -1,0 +1,19 @@
+{
+    "MOTD": "Seas und Willkommen auf dem Tgwla GAng TeamSpeak, {k:username}\nWenn du Wissen willst, was hier alles möglich ist, schick mir eine Nachricht mit dem Text \"help\"!",
+    "INVALID_PERMISSION_USER": "Du hast keine Berechtigung, diese Bot zu benutzen.",
+    "RECEIVED_PERMISSION_USER": "Du kannst nun den Bot benutzen!",
+    "COMMAND.HELP.TEXT": [
+        "",
+        "Hallo {k:username}. Du willst Hilfe?",
+        "\"createchannel <channelname> [passwort]\": Erstellt dir einen Temporären Channel"
+    ],
+    "COMMAND.CREATECHANNEL.TOOFEWARGS": "Bitte gib einen Channelnamen an!",
+    "COMMAND.CREATECHANNEL.CHANNELEXISTS": "Der gewünschte Channelname existiert bereits!",
+    "COMMAND.CREATECHANNEL.CHANNELCREATED": [
+        "Dein Channel \"{k:channel_name}\" wurde erstellt.",
+        "Das Passwort, falls gesetzt, lautet \"{k:channel_password}\""
+    ],
+    "COMMAND.CREATECHANNEL.CHANNELDESC": "Channel erstellt von \"{k:bot_nickname}\" für den Benutzer \"{k:client_nickname}\" [id={k:client_id}]",
+    "COMMAND.TOGGLESERVERADMIN.ADDED": "Du hast jetzt Server-Admin!",
+    "COMMAND.TOGGLESERVERADMIN.REMOVED": "Du hast nun kein Server-Admin mehr!"
+}

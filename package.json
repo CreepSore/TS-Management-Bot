@@ -1,0 +1,25 @@
+{
+  "name": "ts-management-bot",
+  "version": "1.0.0",
+  "description": "Management Bot for my TeamSpeak",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CreepSore/TS-Management-Bot.git"
+  },
+  "keywords": [
+    "ts3-bot"
+  ],
+  "author": "CreepSore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CreepSore/TS-Management-Bot/issues"
+  },
+  "homepage": "https://github.com/CreepSore/TS-Management-Bot#readme",
+  "dependencies": {
+    "ts3-nodejs-library": "^2.3.1"
+  }
+}
